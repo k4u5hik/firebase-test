@@ -1,17 +1,16 @@
 // import logo from './logo.svg';
-import { Route } from "react-router";
 import './App.css';
-// import Character from "./pages/Character";
+import Character from "./pages/Character";
 import CharactersList from './pages/CharactersList';
+import { Routes, Route } from "react-router";
 
 function App() {
   return (
     <div className="App">
-      <CharactersList />
-      {/* <Routes> */}
-        {/* <Route strict exact path="/index" component={CharactersList} /> */}
-        {/* <Route strict exact path="/:id" component={Character} /> */}
-      {/* </Routes> */}
+    <Routes>
+      <Route path='/' component={<CharactersList />} />
+      <Route path='/:id' component={<Character />} />
+    </Routes>
     </div>
   );
 }
